@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styleregistro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/valida.css' %}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <title>Modificar pedido</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="theme-switch-wrapper "  >
+              <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+              </label>
+          
+            </div>
+
+            <script>
+              const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        
+              function switchColor(e) {
+                  if (e.target.checked) {
+                      document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                  else {
+                      document.documentElement.setAttribute('data-theme', 'light');
+                  }
+              }
+              colorSwitch.addEventListener('change', switchColor, false);
+        
+          </script>
+
+          </div>
+
+        </div>
+
+      </div>
+      <br><br>
+
+
+
+
+
+
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 texto">
+                <h1>Modificando pedidos</h1>
+                <form method="POST" action="#" id="formulario" class="centrado">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        {{form.as_table}}
+                    </div>
+                
+                
+                        <div class="form-group">
+                         <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
+                        <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>  
+    
+    <br><br><br>
+    
+    <footer>
+      <div class="container-fluid politicas" id="rellenocontainer">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <a href="#" >Políticas de privacidad</a>
+            <br>
+            <a href="#" >Aviso legal</a>
+            <br>
+            <a href="#" >Política de cookies </a>
+            <br>
+            <a href="#" >Más informacion de Construction.contacto@gmail.com</a>
+           
+           </div>
+
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+              <div class="linea"></div>
+                  <br>
+                 <img src="{% static 'core/img/logo.jpg'%}" width="100px" height="100px" class="rounded-circle" >
+                 <br>
+                 <br>
+                 <a href="#" target="_self"><img src="{% static 'core/img/facebook.jpg' %}" width="30px" height="30px" ></a>
+                 <a href="#" target="_self"><img src="{% static 'core/img/instagram.jpg' %}" width="30px" height="30px" ></a>
+                 <a href="#" target="_self"><img src="{% static 'core/img/twitter2.jpg' %}" width="40px" height="40px" ></a>
+                 
+
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+
+               <p class="texto">Esta compañia se dedica a la venta de maderas 
+                 tipo de pino y armados de construcion.
+               </p>
+               
+               <p class="texto"> Pais: Santiago de chile
+                   <br>
+                   Dirección: Hernan diaz arrieta #4113
+                   <br>
+                   Contacto: +569 35266087
+                   <br>
+                   Correo: Construction.contacto@gmail.com
+               </p>
+            </div>
+
+       </div>
+     
+     </div>
+     
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+           <p class="texto">Núñez Allan @Copyrigth Derechos reservados</p>
+
+         </div>
+
+       </div>
+
+     </div>
+
+    </footer>
+    
+</body>
+</html>

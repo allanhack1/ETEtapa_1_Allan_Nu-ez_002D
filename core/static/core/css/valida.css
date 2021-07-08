@@ -1,0 +1,51 @@
+
+    
+    input {
+        float: left;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        clear: both;
+        float: left;
+        width: 180px;
+    }
+
+    button {
+        clear: both;
+        float: left;
+        width: 70px;
+    }
+
+    .error-control {
+        border: 1px solid red;
+    }
+
+    label.error {
+        color: red;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        margin-left: 100px;
+        
+    
+    }
+    
+    #caja{
+        margin-top:50px;
+        margin-left:20px;
+   
+    }
+
+    .centrado {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+

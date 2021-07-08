@@ -1,0 +1,215 @@
+/* creacion del boton para cambiar el color de la pagina de la linea 1 hasta la 77  */
+:root {
+    --primary-color: #000000;
+    --bg-color:#040d3f;
+    --secondary-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color:#040d3f;
+    --bg-color: #000000;
+    --secondary-color: #ff3366;
+  }
+  
+  
+  .theme-switch-wrapper {
+    position: absolute;
+    top: 80px;
+    left: 100%;
+    transform: translate(-110%, -110%);
+  } 
+  
+  
+  .theme-switch {
+    display: block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #000000;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    transition: .4s all;
+  }
+  
+  .slider:before {
+    background-color: #ffffff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s all;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #ff3366;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: .25rem;
+  }
+  
+  .slider.round:before {
+    border-radius: .25rem;
+  }
+  
+  #body 
+  {
+    background-color: var(--bg-color);
+    color: var(--primary-color)
+  }
+
+* {
+    margin : 0 ;
+    padding :  0 ;
+    box-sizing : border-box;
+}
+
+
+
+.catalogo{
+     font-family: 'open sans';  
+}
+
+.catalogo h1{
+      text-align: center;
+      margin: 10px 0 10px 0;
+      font-weight: 300;
+}
+
+.linea{
+    border-top: 10px solid #dc1414;
+    margin-bottom: 40px;
+}
+
+
+.contenedor-imagenes{
+    display:flex;       
+    width: 75%;
+    margin: auto;
+    justify-content:center;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 44%;
+    position: relative;
+    height: 400px;
+    margin-bottom: 30px;
+    
+}
+
+.imagen img{
+    width: 68%;
+    height: 100%;   
+    object-fit:cover;
+    border: 3px solid #dc1414;
+}
+    
+.overlay{
+    position: absolute ;
+    bottom:0;
+    left: 0;
+    background: #d60b0bbb;
+    width: 68%;
+    height:0%;
+    transition: .3s ease;
+    overflow: hidden;
+    
+}
+
+.overlay h4{
+    color: #000000;   
+    font-weight: 100; 
+    font-size: 20px;
+    position:relative;
+    top: 40%;
+    left: 50%;
+    text-align:center;
+    transform: translate(-50%, -50%);
+}
+    
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    h1{
+        font-size: 22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+h1{
+  color: #dc1414;
+      
+}
+
+#rellenocontainer
+{
+    background-color: #dc1414;
+}
+
+.politicas a
+{
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.texto /*modifica todos los parrafos (<p>)*/
+{
+ color: #ffebcd;
+ text-align: justify ;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.imgresponsive img 
+{
+    width: 100%; /*estable el ancho de la imagen*/;
+
+}
+
+
+
